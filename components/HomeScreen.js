@@ -5,21 +5,23 @@ import { Audio } from 'expo-av';
 
 
 export default function HomeScreen({ navigation}) {
-    const [sound, setSound] = useState(null);
-    dsds
+    const [sound, setSound] = useState(null); 
     
     function handleButtonPress(destination) {
+      console.log("Hiiii");
       playSound();
       navigation.navigate(destination);
     }
 
 async function playSound() {
     try {
+      console.log("Yeah");
       const { sound } = await Audio.Sound.createAsync(
         require('../jungle-story-168459.mp3')
       );
       setSound(sound);
       await sound.playAsync();
+      console.log("ohhhhh");
     } catch (error) {
       console.log('Error loading or playing sound:', error);
     }
