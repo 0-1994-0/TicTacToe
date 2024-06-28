@@ -23,7 +23,7 @@ function Square({ value, onSquareClick }) {
     const styles = StyleSheet.create({
         square: {
           alignItems: 'center',
-          backgroundColor: 'rgba(255, 255, 255, .4)',
+          backgroundColor: 'rgba(255, 255, 255, .2)',
           borderWidth: 1,
           borderColor: '#006400',
           borderWidth: 2,
