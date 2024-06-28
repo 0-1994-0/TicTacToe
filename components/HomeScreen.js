@@ -41,19 +41,19 @@ async function playSound() {
     return (
       <ImageBackground source={require('../jungle.jpg')} style={styles.background}>
       <View style={styles.container}>
-      <Text style={styles.title}>Choose Game Mode</Text>
+      <Text style={styles.title}>Choose a game mode</Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => handleButtonPress('Two Player Game')}
       >
-        <Text style={styles.buttonText}>Two Player Game</Text>
+        <Text style={styles.buttonText}>Two Players Game</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
         onPress={() => handleButtonPress('Single Player Game')}
       >
-        <Text style={styles.buttonText}>Single Player Game</Text>
+        <Text style={styles.buttonText}>Single Player Game</Text> 
       </TouchableOpacity>
     </View>
     </ImageBackground>
@@ -63,6 +63,8 @@ async function playSound() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    height: '100%',
+    width: '100%',
     resizeMode: 'cover',
   },
   container: {
@@ -71,11 +73,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 26,
+    fontSize: 35,
+    textDecorationColor:'black',
     marginBottom: 20,
     fontWeight: 'bold',
-    color: '#8fbc8f',
-    borderColor: '#2f4f4f',
+    color: '#006400',
+    textShadowRadius: 15,
+    textShadowColor:'white',
+    textDecorationLine: 5,
+   
   },
   button: {
     padding: 20,

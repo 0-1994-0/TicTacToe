@@ -10,11 +10,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { registerRootComponent } from 'expo';
 import { Audio } from 'expo-av';
 
+
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-  
   
 <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -30,12 +30,17 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#9acd32',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
+
+
+
 
 registerRootComponent(App);

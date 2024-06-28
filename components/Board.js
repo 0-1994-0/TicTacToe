@@ -4,30 +4,31 @@ import { Audio } from 'expo-av';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 export default function Board({ xIsNext, squares, onPlay, onUndo }) {
-  const [winner, setWinner] = useState(null);
-// const [sound, setSound] = useState(null);
+ const [winner, setWinner] = useState(null);
+ const [sound, setSound] = useState(null);
   
 
   useEffect(() => {
     const calculatedWinner = calculateWinner(squares);
     if (calculatedWinner && !winner) {
       setWinner(calculatedWinner);
+      playSound();
     }
   }, [squares]);
  
 
- /* useEffect(() => {
+ useEffect(() => {
     if (winner) {
       playSound();
     }
   }, [winner]);
-  */
+ 
 
  useEffect(() => {
     setWinner(calculateWinner(squares));
   }, [squares]);
   
-  /*
+  
   useEffect(() => {
     return sound
       ? () => {
@@ -40,7 +41,7 @@ export default function Board({ xIsNext, squares, onPlay, onUndo }) {
   async function playSound() {
     try {
       const { sound } = await Audio.Sound.createAsync(
-        require('../jungle-story-168459.mp3')
+        require('../tiger-roar-loudly-193229.mp3')
       );
       setSound(sound);
       await sound.playAsync();
@@ -48,7 +49,7 @@ export default function Board({ xIsNext, squares, onPlay, onUndo }) {
       console.log('Error loading or playing sound:', error);
     }
   }
-  */
+  
 
   function handleClick(i) {
     if (squares[i] || winner) {
