@@ -41,7 +41,7 @@ export default function Board({ xIsNext, squares, onPlay, onUndo }) {
   async function playSound() {
     try {
       const { sound } = await Audio.Sound.createAsync(
-        require('../tiger-roar-loudly-193229.mp3')
+        require('../assets/tiger-roar-loudly-193229.mp3')
       );
       setSound(sound);
       await sound.playAsync();
@@ -101,9 +101,10 @@ export default function Board({ xIsNext, squares, onPlay, onUndo }) {
       paddingLeft:60,
       paddingBottom:50,
       fontSize: 30,
-      color: '#f0ffff',
+      color: '#006400',
       fontWeight: 'bold',
       alignContent: 'center',
+      alignItems:'center',
       justifyContent: 'center',
       
     },

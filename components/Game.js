@@ -45,7 +45,7 @@ export default function Game() {
     });
   
     return (
-      <ImageBackground source={require('../BackgroundPvP.jpg')} style={styles.background}>
+      <ImageBackground source={require('../assets/BackgroundPvP.jpg')} style={styles.background}>
       <View style={styles.game}>
       <View style={styles.gameBoard}>
          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} onUndo={undoMove}/>

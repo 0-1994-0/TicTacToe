@@ -17,7 +17,7 @@ async function playSound() {
     try {
       console.log("Yeah");
       const { sound } = await Audio.Sound.createAsync(
-        require('../jungle-story-168459.mp3')
+        require('../assets/jungle-story-168459.mp3')
       );
       setSound(sound);
       await sound.playAsync();
@@ -39,7 +39,7 @@ async function playSound() {
 
   
     return (
-      <ImageBackground source={require('../jungle.jpg')} style={styles.background}>
+      <ImageBackground source={require('../assets/jungle.jpg')} style={styles.background}>
       <View style={styles.container}>
       <Text style={styles.title}>Choose a game mode</Text>
 

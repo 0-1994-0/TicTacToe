@@ -182,9 +182,9 @@ export default function SinglePlayerGame() {
     });
 
   return (
-    <ImageBackground source={require('../BackgroundPvE.jpg')} style={styles.background}>
+    <ImageBackground source={require('../assets/BackgroundPvE.jpg')} style={styles.background}>
     <View style={styles.game}>
-    <Text style={styles.difficultyStatus}> Choose a difficulty level: </Text> 
+    <Text style={styles.difficultyStatus}> Difficulty level</Text> 
       <View style={styles.buttonContainer}>
    
           <TouchableOpacity
@@ -307,6 +307,7 @@ const styles = StyleSheet.create({
 
   difficultyStatus:{
     fontSize: 25,
+    color:'#006400',
   },
 
 

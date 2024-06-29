@@ -3,8 +3,8 @@ import { TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 
 
 //const X_IMAGE = require('../assets/splash.png');  
-const X_IMAGE = require('../tiger.png'); 
-const O_IMAGE = require('../jaguar.png'); 
+const X_IMAGE = require('../assets/tiger.png'); 
+const O_IMAGE = require('../assets/jaguar.png'); 
 
 function Square({ value, onSquareClick }) {
   let imageSource = null;
